@@ -5,7 +5,6 @@
 </nav>
 
 <div class="open-menu" *ngIf="isMenuOpen">
-
     <div class="ul-container">
       <ul [ngClass]="{'show': isMenuOpen}">
         <li>
@@ -19,3 +18,27 @@
         </li>
       </ul>
     </div>
+
+    <div class="menu-bottom">
+        <div class="menu-bottom-left">
+            <h2>Say hi!</h2>
+            <div class="copy-email">
+              <div class="email-container">
+                <p #emailContent class="email">kontakt@stefanroth.dev</p>
+              <img (click)="copyToClipboard(emailContent)" title="Click to copy the Email" class="cursor" src="assets/img/copy.png" alt="">
+              </div>
+              <div class="copied-container">
+              <p *ngIf="isCopied">Email has been copied!</p>
+              </div>
+        </div>
+        </div>
+
+        <div class="menu-bottom-right">
+            <a href="#"><img src="assets/img/github-btn.png" alt="Github"></a>
+            <a href="#"><img src="assets/img/email-btn.png" alt="Mail"></a>
+            <a href="#"><img src="assets/img/linkedin-btn.png" alt="Linkedin"></a>
+        </div>
+    </div>
+
+</div>
+

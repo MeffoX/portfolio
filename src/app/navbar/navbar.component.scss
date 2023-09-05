@@ -23,6 +23,7 @@ nav {
 
 .open-menu {
     position: fixed;
+    height: calc(100vh - 92px);
     width: 100vw;
     top: 92px;
 }
@@ -104,6 +105,96 @@ nav {
       }
 }
 
+.menu-bottom {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    background-color: #000;
+    height: 20%;
+    clip-path: polygon(0% 0%, 100% 60%, 100% 100%, 0% 100%);
+    animation: slideFromBottom 700ms ease-in-out;
+}
+
+.menu-bottom-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 80%;
+
+    h2 {
+        display: inline-block;
+        transition: 225ms ease-in-out;
+        color: #f8f8ee;
+        font-size: 56px;
+        font-weight: 900;
+        margin: 0;
+        padding-left: 64px;
+      
+        &:hover {
+          color: #00BC8F;
+        }
+      }
+
+      .copy-email {
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+      padding-left: 64px;
+
+      .email-container {
+        display: flex;
+        align-items: center;
+        color: white;     
+
+        img {
+          padding-left: 30px;
+          cursor: pointer;
+        }
+      }
+
+      .copied-container {
+        display: flex;
+        align-items: flex-start;
+
+        p {
+          color: white;
+          margin: 0;
+        }
+      }
+
+      img {
+        width: 30px;
+
+        &:hover~.email {
+          background-color: #00BC8F !important;
+        }
+      }
+    }
+}
+
+.menu-bottom-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35%;
+    padding-right: 64px;
+
+    img {
+      transition: all 225ms ease-in-out;
+      width: 40px;
+      padding-left: 30px;
+
+      &:hover {
+        transform: translateY(-20px);
+      }
+    }
+  }
+
+
     @keyframes slideInFromLeft {
         0% {
           transform: translateX(-100%);
@@ -111,5 +202,16 @@ nav {
       
         100% {
           transform: translateX(0);
+        }
+      }
+
+      @keyframes slideFromBottom {
+
+        0% {
+          transform: translateY(100%);
+        }
+      
+        100% {
+          transform: translateY(0);
         }
       }
