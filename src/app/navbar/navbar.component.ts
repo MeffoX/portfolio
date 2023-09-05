@@ -13,6 +13,7 @@ export class NavbarComponent {
     this.isMenuOpen = !this.isMenuOpen;
     document.body.style.overflow = this.isMenuOpen ? 'hidden' : 'auto';
   }
+  
 
 
   copyToClipboard(element: HTMLParagraphElement) {
