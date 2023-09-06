@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuStateService } from '../menu-state.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,12 +9,17 @@ import { Component } from '@angular/core';
 export class NavbarComponent {
   isMenuOpen: boolean = false;
   isCopied: boolean = false;
+  
 
+  constructor(public menuStateService: MenuStateService) {}
+
+  
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
     document.body.style.overflow = this.isMenuOpen ? 'hidden' : 'auto';
+    this.menuStateService.toggleMenu();
+    document.body.style.overflow = this.menuStateService.menuState.value ? 'hidden' : 'auto';
   }
-  
 
 
   copyToClipboard(element: HTMLParagraphElement) {
@@ -30,6 +36,4 @@ export class NavbarComponent {
       this.isCopied = false;
     }, 3000);
   }
-  
-
 }

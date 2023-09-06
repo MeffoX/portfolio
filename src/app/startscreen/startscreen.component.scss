@@ -54,7 +54,7 @@ startscreen {
 }
 
 .main-bottom {
-    width: calc(100vw - 64px);
+    width: 100vw;
     /*margin-top: 300px;*/
     display: flex;
     justify-content: space-between;
@@ -66,13 +66,15 @@ startscreen {
     letter-spacing: -0.025em;
     text-align: left;
     transform: rotate(-90deg) translateY(-80px);
-    margin-left: 84px;
+    margin-left: 100px;
+    padding-left: 64px;
     }
 
     .scroll-down {
         position: relative;
         overflow: hidden;
         margin-right: 64px;
+        cursor: pointer;
       
         img {
           position: absolute;
