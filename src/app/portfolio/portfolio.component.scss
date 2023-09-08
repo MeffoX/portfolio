@@ -1,0 +1,128 @@
+.headline {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: justify;
+  
+    h1 {
+      font-size: 78px;
+    }
+  
+    span {
+      font-size: 23px;
+      font-style: bold;
+      font-weight: 400;
+      overflow-wrap: break-word;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
+  .projects {
+    display: flex;
+    // justify-content: space-between;
+    margin-top: 100px;
+    width: calc(100% - 200px);
+    padding: 0 100px;
+    filter: grayscale(100%);
+  
+    &:hover {
+      filter: none;
+    }
+  
+    img {
+      width: 620px;
+      height: 393px;
+      cursor: pointer;
+  
+      @media (max-width: 1150px) {
+        width: 480px;
+        height: 280px;
+      }
+    }
+  }
+  
+  .flex-reverse {
+    flex-direction: row-reverse !important;
+  }
+  
+  .description-left {
+    width: calc(50% - 100px);
+    padding-top: 80px;
+    padding-right: 75px;
+    text-align: left !important;
+    padding-left: 150px !important;
+    padding-right: 0 !important;
+    display: none;
+  
+    p {
+      font-family: Overpass-Thin, sans-serif;
+    }
+  }
+  
+  .description-right {
+    width: calc(50% - 100px);
+    padding-top: 80px;
+    padding-right: 75px;
+    padding-left: 0px !important;
+    padding-right: 150px !important;
+    display: none;
+  
+    p {
+      font-family: Overpass-Thin, sans-serif;
+    }
+  }
+  
+  .picture-left:hover+.description-left,
+  .description-left:hover {
+    display: block;
+    animation: fadeInLeft 0.3s ease-in-out;
+  
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+  
+      to {
+        opacity: 1;
+      }
+    }
+  }
+  
+  .picture-right:hover+.description-right,
+  .description-right:hover {
+    display: block;
+    animation: fadeInRight 0.3s ease-in-out;
+  
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+  
+      to {
+        opacity: 1;
+      }
+    }
+  }
+  
+  .technology-container {
+    display: inline-flex;
+  
+    p {
+      margin: 0 7px 0 0;
+      font-weight: 400;
+      font-size: 23px;
+      line-height: 120%;
+      color: #00bc8f;
+    }
+  }
+  
+  .url-container {
+    display: inline-flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    width: 375px;
+    gap: 20px;
+  }

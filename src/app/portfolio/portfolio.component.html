@@ -1,0 +1,23 @@
+<div class="headline" id="projects">
+    <h1>Portfolio</h1>
+    <span>This page is a sample of my work - please feel free to try them out</span>
+</div>
+
+<div class="projects" *ngFor="let item of projects; let i = index" [ngClass]="{'flex-reverse': i%2 != 0}">
+    <img src="{{item.picture}}" [ngClass]="{'picture-left': i%2 == 0, 'picture-right': i%2 != 0}">
+    <div [ngClass]="{'description-left': i%2 == 0, 'description-right': i%2 !=0}">
+        <h2>{{item.headline}}</h2>
+        <div class="technology-container">
+            <p>{{item.technologies}}</p>
+        </div>
+        <p>{{item.description}}</p>
+        <div class="url-container">
+            <a href="{{item.livetest}}" target="_blank">
+                <button class="btn">Live test</button>
+            </a>
+            <a href="{{item.github}}" target="_blank">
+                <button class="btn">GitHub</button>
+            </a>
+        </div>
+    </div>
+</div>

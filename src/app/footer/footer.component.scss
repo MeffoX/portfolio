@@ -1,0 +1,111 @@
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    width: 100vw;
+  
+    h1 {
+      color: #fff;
+      font-weight: 700;
+      margin: 0;
+    }
+  
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      width: calc(100vw - 128px); /* Set the width for footer-container-top */
+      padding: 0 64px; /* Add some padding to separate content from the edges */
+  
+      .footer-container-top {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        align-items: center; /* Vertically center the items */
+        flex: 1; /* Allow footer-container-top to grow and fill available space */
+  
+        .icon-container {
+          display: flex;
+          gap: 40px;
+  
+          /* Add some gap between the icon images */
+          img {
+            width: 40px;
+            cursor: pointer;
+            transition: all 225ms ease-in-out;
+            &:hover {
+              transform: translateY(-20px);
+            }
+          }
+        }
+      }
+  
+      .footer-container-bottom {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        align-items: center;
+        flex: 1;
+  
+        p {
+          color: #fff;
+          font-size: 24px;
+        }
+  
+        a {
+          text-decoration: none;
+        }
+  
+        .legal {
+          font-size: 16px;
+          transition: all 225ms ease-in-out;
+          cursor: pointer;
+          &:hover {
+            color: #00BC8F;
+          }
+        }
+      }
+    }
+  }
+  
+  @media(max-width:550px) {
+  
+    .footer-container {
+      width: calc(100vw - 128px);
+      padding: 0 64px;
+  
+      .footer-container-top {
+        justify-content: center !important;
+  
+        img {
+          &:hover {
+            transform: translateY(0) !important;
+          }
+        }
+  
+        .icon-container {
+        gap: 50px !important;
+        }
+  
+        h1 {
+          display: none;
+        }
+      }
+    
+      .footer-container-bottom {
+        justify-content: center !important;
+        gap: 50px !important;
+  
+        .legal {
+          display: flex;
+          // flex: inherit;
+        }
+  
+  
+        p {
+          font-size: 16px !important;
+        }
+      }
+  
+    }
+  }

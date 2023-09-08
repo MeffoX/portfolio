@@ -1,0 +1,68 @@
+.container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .myskills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 64px;
+    border: 4px solid black;
+    min-height: 60vh;
+    max-width: min(1280px, 100vw);
+  
+    h2 {
+      position: relative;
+      top: -38px;
+      background: #FFFCF3;
+      padding: 0 16px;
+      font-size: 54px;
+      font-weight: 800;
+      margin: 0 30px;
+      transition: all 225ms ease-in-out;
+  
+      &:hover {
+        cursor: default;
+        color: #00BC8F;
+      }
+    }
+  }
+  
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 125px;
+    padding: 64px;
+  }
+  
+  .skill-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    transition: all 225ms ease;
+    opacity: 1;
+    transform: translateY(0);
+  
+    &:hover p {
+      color: #00BC8F;
+    }
+  
+    &:hover img {
+      opacity: 0.4;
+      transform: translateY(-20px);
+    }
+  }
+
+  
+  .icon-container p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+  }

@@ -1,1 +1,15 @@
-<p>skills works!</p>
+<div class="container">
+    <div class="myskills">
+      <h2 id="skills">My skills</h2>
+        <div class="icon-container">
+            <div *ngFor="let skill of skills" class="skill-container">
+                <img class="hover-effect" [src]="skill.imageUrl" alt="Image">
+                <p>{{ skill.description }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<img src="assets/img/arrow_right.png" alt="Go Down">
+
