@@ -21,6 +21,7 @@ startscreen {
 .header-top {
     width: calc(100vw - 128px);
     padding: 0 64px;
+    margin-top: 200px;
 
     h1 {
         font-family: 'Syne', sans-serif;
@@ -31,6 +32,7 @@ startscreen {
         letter-spacing: -0.025em;
         text-align: center;
         margin-bottom: 0;
+        cursor: default;
     }
 }
 
@@ -42,6 +44,7 @@ startscreen {
 
     h2 {
         margin: 0;
+        cursor: default;
     }
 
     hr {

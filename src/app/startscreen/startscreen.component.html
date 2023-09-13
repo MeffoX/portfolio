@@ -1,4 +1,4 @@
-<div *ngIf="!isMenuOpen" class="header">
+<div class="header">
     <div class="header-top">
         <h1>Frontend<br> Developer</h1>
     </div>
@@ -8,9 +8,9 @@
     </div>
 
     <div class="main-bottom">
-        <p class="main-contact">kontakt@stefanroth.dev</p>
+        <p (click)="scrollTo('contactSection')" class="main-contact">kontakt@stefanroth.dev</p>
 
-        <div class="scroll-down">
+        <div (click)="scrollTo('aboutMeSection')" class="scroll-down">
             <img src="assets/img/arrow-down.png">
             <p>Scroll <br> Down</p>
         </div>

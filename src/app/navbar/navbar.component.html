@@ -1,23 +1,24 @@
 <nav>
-    <p>[SR]</p>
+    <p (click)="onMenuClick('startscreenSection')">[SR]</p>
     <img (click)="toggleMenu()" [src]="isMenuOpen ? 'assets/img/close.png' : 'assets/img/burger_menu.png'">
 
 </nav>
 
 <div class="open-menu" *ngIf="isMenuOpen">
-    <div class="ul-container">
-      <ul [ngClass]="{'show': isMenuOpen}">
-        <li>
-          <a>About Me</a>
-        </li>
-        <li>
-          <a>My Skills</a>
-        </li>
-        <li>
-          <a>Portfolio</a>
-        </li>
-      </ul>
-    </div>
+  <div class="ul-container">
+    <ul [ngClass]="{'show': isMenuOpen}">
+      <li>
+        <a (click)="onMenuClick('aboutMeSection')">About Me</a>
+      </li>
+      <li>
+        <a (click)="onMenuClick('mySkillsSection')">My Skills</a>
+      </li>
+      <li>
+        <a (click)="onMenuClick('portfolioSection')">Portfolio</a>
+      </li>
+    </ul>
+  </div>
+
 
     <div class="menu-bottom">
         <div class="menu-bottom-left">

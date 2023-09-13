@@ -1,3 +1,4 @@
+import { ScrollService } from './../scroll.service';
 import { Component } from '@angular/core';
 import { MenuStateService } from '../menu-state.service';
 
@@ -11,7 +12,19 @@ export class NavbarComponent {
   isCopied: boolean = false;
   
 
-  constructor(public menuStateService: MenuStateService) {}
+  constructor(public menuStateService: MenuStateService, private scrollService: ScrollService) {}
+
+
+  onMenuClick(section: string) {
+    if (this.isMenuOpen) {
+      this.toggleMenu();
+    }
+    
+    setTimeout(() => {
+      this.scrollService.scrollToElement(section);
+    }, 300);
+  }
+  
 
   
   toggleMenu() {

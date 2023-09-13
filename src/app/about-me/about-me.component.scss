@@ -33,9 +33,10 @@
         text-align: center;
         transition: all 225ms ease-in-out;
     
-        &:hover{
-            color:#00BC8F;
-        }
+        &:hover {
+            cursor: default;
+            color: #00BC8F;
+          }
     }
 
     span {

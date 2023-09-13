@@ -1,25 +1,18 @@
-import { Component, OnDestroy } from '@angular/core';
-import { MenuStateService } from '../menu-state.service';
-import { Subscription } from 'rxjs';
+import { ScrollService } from './../scroll.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-startscreen',
   templateUrl: './startscreen.component.html',
   styleUrls: ['./startscreen.component.scss']
 })
-export class StartScreenComponent implements OnDestroy {
-  isMenuOpen = false;
-  public subscription: Subscription;
+export class StartScreenComponent {
 
-  constructor(public menuStateService: MenuStateService) {
-    this.subscription = this.menuStateService.menuState$.subscribe(
-      state => this.isMenuOpen = state
-    );
-  }
+  constructor(private scrollService:ScrollService){}
 
-  ngOnDestroy() {
-    if (this.subscription) {
-      this.subscription.unsubscribe();
-    }
-  }
+
+  scrollTo(section:string) {
+    this.scrollService.scrollToElement(section);
+}
+
 }
