@@ -23,8 +23,7 @@ export class NavbarComponent {
     setTimeout(() => {
       this.scrollService.scrollToElement(section);
     }, 300);
-  }
-  
+  }  
 
   
   toggleMenu() {

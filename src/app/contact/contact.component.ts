@@ -1,5 +1,6 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -13,15 +14,14 @@ export class ContactComponent {
   @ViewChild('sendButton') sendButton!: ElementRef;
   @ViewChild('loader') loader!: ElementRef;
 
-  messageSent: boolean = false;
+  messageSent: string = '';
   isActive: boolean = false;
-
 
   async sendMail() {
     let nameField = this.nameField.nativeElement;
     let messageField = this.messageField.nativeElement;
     let sendButton = this.sendButton.nativeElement;
-    let emailField = this.emailField.nativeElement;    
+    let emailField = this.emailField.nativeElement;
 
     nameField.disabled = true;
     messageField.disabled = true;
@@ -34,15 +34,20 @@ export class ContactComponent {
     fd.append('message', messageField.value);
     fd.append('mail', emailField.value);
 
-    //senden  
-    await fetch('#',
-      {
-        method: 'POST',
-        body: fd
-      }
+    //senden  stefanroth.dev/send_mail/send_mail.php
+    try {
+      await fetch('https://stefanroth.dev/send_mail/send_mail.php',
+        {
+          method: 'POST',
+          body: fd
+        }
+      );
+      this.messageSent = 'Message successfully sent!';
+    } catch (error) {
+      this.messageSent = 'Sorry! There seems to have been an error :('
+    }
 
 
-    ), this.messageSent = true;
 
     nameField.value = '';
     messageField.value = '';
@@ -50,15 +55,14 @@ export class ContactComponent {
     emailField.value = '';
 
     setTimeout(() => {
-      this.messageSent = false;
+      this.messageSent = '';
 
       nameField.disabled = false;
       messageField.disabled = false;
       emailField.disabled = false;
-      sendButton.disabled = false;   
+      sendButton.disabled = false;
       this.isActive = false;
-    }, 3000 );
+    }, 3000);
 
   }
 }
-
