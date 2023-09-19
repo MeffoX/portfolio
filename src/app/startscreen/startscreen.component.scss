@@ -1,4 +1,4 @@
-startscreen {
+app-startscreen {
     font-family: 'Overpass', sans-serif;
     position: absolute;
     top: 204px;
@@ -33,6 +33,20 @@ startscreen {
         text-align: center;
         margin-bottom: 0;
         cursor: default;
+
+        @media(max-width:1180px) {
+          font-size:80px;
+        }
+
+        @media(max-width:790px) {
+          font-size:45px;
+          line-height: 45px;
+        }
+
+        @media(max-width:520px) {
+          font-size: 23px;
+          line-height: 20px;
+        }
     }
 }
 
@@ -58,7 +72,6 @@ startscreen {
 
 .main-bottom {
     width: 100vw;
-    /*margin-top: 300px;*/
     display: flex;
     justify-content: space-between;
 
@@ -96,9 +109,33 @@ startscreen {
             text-align: center;
             padding-top: 160px;
         }
-      }
-      
-      
+      }  
+}
+
+.btn-container {
+  display: none;
+}
+
+button {
+  width: 220px;
+  padding: 16px;
+  margin: 80px 0;
+  font-size: 23px;
+  border: 6px solid black;
+  background-color: transparent;
+  transition: all 225ms ease-in-out;
+  font-family: sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  &:hover {
+    width: 250px;
+  }
 }
 
 @keyframes slideUpDown {
@@ -109,4 +146,43 @@ startscreen {
       top: 0;
     }
   }
+
+@media(max-width:1180px) {
+  h1 {
+    font-size: 80px;
+  }
+
+  .header-bottom {
+    font-size: 22px;
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media(max-width:520px) {
+  hr {
+    display: none;
+  }
+
+  .header-bottom {
+    font-size: 20px;
+    padding: 50px 0;
+  }
+
+  .main-bottom {
+    align-items: center;
+    justify-content: center;
+
+    .main-contact {
+      display: none;
+    }
+
+    .scroll-down {
+      margin-right: 0;
+    }
+  }
+}
   

@@ -1,5 +1,5 @@
 nav {
-    z-index: 99;
+    z-index: 999;
     position: fixed;
     display: flex;
     justify-content: space-between;
@@ -7,6 +7,7 @@ nav {
     height: 92px;
     padding: 0 64px;
     width: calc(100vw - 128px);
+    background-color: #FFFCF3;
 
     p {
         font-size: 26px;
@@ -39,7 +40,6 @@ nav {
       display: flex;
       justify-content: center;
       flex-direction: column;
-      align-items: center;
     }
   
     li {
@@ -65,11 +65,8 @@ nav {
             width: 30px;
             height: 40px;
             left: 5%;
-            /* Adjust this value as needed to position the ::before element on hover */
             top: 70%;
-            /* Set a fixed vertical position for ::before element, here it's centered */
             transform: translateY(-50%);
-            /* Center ::before element vertically */
             transition: none;
             z-index: -1;
           }
@@ -83,11 +80,8 @@ nav {
             width: 240px;
             height: 40px;
             left: 50%;
-            /* Adjust this value as needed to position the ::before element on hover */
             top: 70%;
-            /* Set a fixed vertical position for ::before element on hover, here it's centered */
             transform: translateY(-50%);
-            /* Center ::before element vertically on hover */
             z-index: -1;
           }
       
@@ -141,7 +135,7 @@ nav {
 
       .copy-email {
       display: flex;
-      align-items: start;
+      align-items: flex-start;
       flex-direction: column;
       padding-left: 64px;
 
@@ -215,3 +209,4 @@ nav {
           transform: translateY(0);
         }
       }
+

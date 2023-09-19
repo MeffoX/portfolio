@@ -1,6 +1,7 @@
 .container {
     display: flex;
     justify-content: center;
+    padding-top: 120px;
   }
   
   .myskills {
@@ -65,4 +66,9 @@
     text-align: center;
     font-size: 18px;
     font-weight: bold;
+  }
+
+  .arrow-right {
+    position: relative;
+    left: 64px;
   }

@@ -3,9 +3,14 @@ body {
     margin: 0;
     background-color: #FFFCF3;
     scroll-behavior: smooth;
-    width: 100vw;
-    max-width: 100%;
+    overflow-x: hidden !important;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: transparent;
+    z-index: 1;
+ }
 
 html{
     scroll-behavior: smooth;
@@ -14,7 +19,7 @@ html{
 h2 {
     font-family: 'Syne', sans-serif;
 }
-
+  
 
 /*
 font-family: 'Overpass', sans-serif;

@@ -1,218 +1,223 @@
 .headline {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    text-align: justify;
-  
-    h2 {
-      font-family: 'Syne', sans-serif;
-      font-size: 78px;
-      font-weight: 800;
-      line-height: 78px;
-      letter-spacing: 0.01em;
-      transition: all 225ms ease-in-out;
-    
-      &:hover {
-        cursor: default;
-        color: #00BC8F;
-      }
-  }
-  
-    span {
-      font-family: 'Overpass', sans-serif;
-      font-size: 23px;
-      font-style: bold;
-      font-weight: 400;
-      overflow-wrap: break-word;
-      display: flex;
-      flex-direction: column;
-    }
-  }
-  
-  .image-container {
-    position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: justify;
+  padding-top: 32px;
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        border: 3px solid transparent;
-        transition: all 0.3s ease;
-        z-index: -1;
-    }
+  h2 {
+    font-family: "Syne", sans-serif;
+    font-size: 78px;
+    font-weight: 800;
+    line-height: 78px;
+    letter-spacing: 0.01em;
+    transition: all 225ms ease-in-out;
 
-    .rotate-arrow {
-        height: 70px;
-        position: absolute;
-        opacity: 0;
-        transform: rotate(0deg);
-        transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-
-    &.picture-left {
-        &:hover {
-            &::before {
-                border-color: black;
-                transform: translate(50px, 50px); 
-            }
-            .rotate-arrow {
-                top: 50%;
-                left: 360px;
-                opacity: 1;
-                transform: rotate(360deg);
-            }
-        }
-    }
-
-    &.picture-right {
-        &:hover {
-            &::before {
-                border-color: black;
-                transform: translate(-50px, 50px);
-            }
-            .rotate-arrow {
-                top: 50%;
-                right: 360px;
-                left: auto;
-                opacity: 1;
-                transform: rotate(-90deg);
-            }
-        }
-    }
-}
-
-  .projects {
-    display: flex;
-    margin-top: 100px;
-    width: calc(100% - 200px);
-    padding: 0 100px;
-    filter: grayscale(100%);
-  
     &:hover {
-      filter: none;
-    }
-  
-    img {
-      width: 620px;
-      height: 393px;
-      cursor: pointer;
-  
-      @media (max-width: 1150px) {
-        width: 480px;
-        height: 280px;
-      }
-    }
-
-    h2 {
-      font-family: 'Syne', sans-serif;
-      font-size: 48px;
-      font-weight: 700;
-      margin-top: 0;
-    }
-
-    h3 {
-      font-family: 'Syne', sans-serif;
-      font-size: 48px;
-      font-weight: 700;
-      line-height: 58px;
-      letter-spacing: 0em;
-      margin: 0;
-
-    }
-  }
-  
-  .flex-reverse {
-    flex-direction: row-reverse !important;
-  }
-  
-  .description-left {
-    width: calc(50% - 100px);
-    padding-right: 75px;
-    text-align: left !important;
-    padding-left: 150px !important;
-    display: none;
-
-    h3 {
-      text-align: right;
-      margin: 0;
-    }
-  
-    p {
-      font-family: 'Overpass', sans-serif;
-    }
-  }
-  
-  .description-right {
-    width: calc(50% - 100px);
-    padding-right: 75px;
-    padding-right: 150px !important;
-    display: none;
-  
-    p {
-      font-family: 'Overpass', sans-serif;
-    }
-  }
-  
-  .picture-left:hover+.description-left,
-  .description-left:hover {
-    display: block;
-    animation: fadeInLeft 0.3s ease-in-out;
-  
-    @keyframes fadeInLeft {
-      from {
-        opacity: 0;
-        transform: translateX(-50px);
-      }
-  
-      to {
-        opacity: 1;
-      }
-    }
-  }
-  
-  .picture-right:hover+.description-right,
-  .description-right:hover {
-    display: block;
-    animation: fadeInRight 0.3s ease-in-out;
-  
-    @keyframes fadeInRight {
-      from {
-        opacity: 0;
-        transform: translateX(50px);
-      }
-  
-      to {
-        opacity: 1;
-      }
-    }
-  }
-  
-  .technology-container {
-    display: inline-flex;
-  
-    p {
-      margin: 0 7px 0 0;
-      font-weight: 400;
-      font-size: 23px;
-      line-height: 120%;
+      cursor: default;
       color: #00bc8f;
     }
   }
-  
-  .url-container {
-    display: inline-flex;
-    justify-content: space-between;
-    margin-top: 30px;
-    width: 375px;
-    gap: 72px;
+
+  span {
+    font-family: "Overpass", sans-serif;
+    font-size: 23px;
+    font-style: bold;
+    font-weight: 400;
+    overflow-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.image-container {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+    z-index: -1;
   }
 
-  .arrow-left {
+  .rotate-arrow {
+    height: 70px;
     position: absolute;
-    right: 64px;
+    top: 50%;
+    opacity: 0;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  &.picture-left {
+    .rotate-arrow {
+      left: 360px;
+    }
+
+    &:hover {
+      &::before {
+        border-color: black;
+        transform: translate(50px, 50px);
+      }
+      .rotate-arrow {
+        opacity: 1;
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  &.picture-right {
+    .rotate-arrow {
+      right: 360px;
+      left: auto;
+    }
+
+    &:hover {
+      &::before {
+        border-color: black;
+        transform: translate(-50px, 50px);
+      }
+      .rotate-arrow {
+        opacity: 1;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}
+
+.projects {
+  display: flex;
+  margin-top: 100px;
+  width: calc(100% - 128px);
+  padding: 0 64px;
+  filter: grayscale(100%);
+
+  &:hover {
+    filter: none;
+  }
+
+  img {
+    width: 620px;
+    height: 393px;
+    cursor: pointer;
+
+    @media (max-width: 1150px) {
+      width: 480px;
+      height: 280px;
+    }
+  }
+
+  h2 {
+    font-family: "Syne", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    margin-top: 0;
+  }
+
+  h3 {
+    font-family: "Syne", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 58px;
+    letter-spacing: 0em;
+    margin: 0;
+  }
+}
+
+.flex-reverse {
+  flex-direction: row-reverse !important;
+}
+
+.description-left {
+  width: calc(50% - 64px);
+  padding-right: 75px;
+  text-align: left !important;
+  padding-left: 150px !important;
+  display: none;
+
+  h3 {
+    text-align: right;
+    margin: 0;
+  }
+
+  p {
+    font-family: "Overpass", sans-serif;
+  }
+}
+
+.description-right {
+  width: calc(50% - 64px);
+  padding-right: 75px;
+  padding-right: 150px !important;
+  display: none;
+
+  p {
+    font-family: "Overpass", sans-serif;
+  }
+}
+
+.picture-left:hover + .description-left,
+.description-left:hover {
+  display: block;
+  animation: fadeInLeft 0.3s ease-in-out;
+
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+.picture-right:hover + .description-right,
+.description-right:hover {
+  display: block;
+  animation: fadeInRight 0.3s ease-in-out;
+
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+.technology-container {
+  display: inline-flex;
+
+  p {
+    margin: 0 7px 0 0;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 120%;
+    color: #00bc8f;
+  }
+}
+
+.url-container {
+  display: inline-flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  width: 375px;
+  gap: 72px;
+}
+
+.arrow-left {
+  position: absolute;
+  right: 64px;
 }
 
 button {
