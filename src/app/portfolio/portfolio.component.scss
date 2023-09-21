@@ -3,7 +3,7 @@
   align-items: center;
   flex-direction: column;
   text-align: justify;
-  padding-top: 32px;
+  padding: 32px 64px 0 64px;
 
   h2 {
     font-family: "Syne", sans-serif;
@@ -17,12 +17,28 @@
       cursor: default;
       color: #00bc8f;
     }
+
+    @media(max-width:1180px) {
+      text-align: center;
+    }
+
+    @media(max-width:790px) {
+      font-size:45px;
+      line-height: 45px;
+    }
+
+    @media(max-width:520px) {
+      display: flex;
+      justify-content: center;
+      font-size: 30px;
+      line-height: 20px;
+      padding: 20px;
+    }
   }
 
   span {
     font-family: "Overpass", sans-serif;
     font-size: 23px;
-    font-style: bold;
     font-weight: 400;
     overflow-wrap: break-word;
     display: flex;
@@ -52,6 +68,10 @@
     opacity: 0;
     transform: rotate(0deg);
     transition: transform 0.3s ease, opacity 0.3s ease;
+
+    @media(max-width: 1350px) {
+      display: none !important;
+    }
   }
 
   &.picture-left {
@@ -95,20 +115,37 @@
   margin-top: 100px;
   width: calc(100% - 128px);
   padding: 0 64px;
-  filter: grayscale(100%);
+  filter: none;
 
   &:hover {
     filter: none;
   }
 
+  @media (min-width: 1351px) {
+    filter: grayscale(100%);
+
+    &:hover {
+        filter: none; /* Entfernt den Filtereffekt bei Hover */
+    }
+  }
+
+  @media (max-width: 1180px) {
+    display: flex;
+    align-items: center;
+    flex-direction: column !important;
+  }
+
   img {
     width: 620px;
     height: 393px;
-    cursor: pointer;
 
     @media (max-width: 1150px) {
       width: 480px;
       height: 280px;
+    }
+    
+    @media(max-width:790px) {
+      width: 100%;
     }
   }
 
@@ -131,14 +168,29 @@
 
 .flex-reverse {
   flex-direction: row-reverse !important;
+
+  @media(max-width: 1350px) {
+    justify-content: space-evenly;
+  }
+
+  @media (max-width: 1180px) {
+    display: flex;
+    align-items: center;
+    flex-direction: column !important;
+  }
 }
 
 .description-left {
   width: calc(50% - 64px);
-  padding-right: 75px;
+  padding-right: 64px;
   text-align: left !important;
   padding-left: 150px !important;
   display: none;
+
+  @media(max-width:1350px) {
+    display: block;
+    padding-left: 40px !important;
+  }
 
   h3 {
     text-align: right;
@@ -152,9 +204,13 @@
 
 .description-right {
   width: calc(50% - 64px);
-  padding-right: 75px;
   padding-right: 150px !important;
   display: none;
+
+  @media(max-width:1350px) {
+    display: block;
+    padding-left: 40px !important;
+  }
 
   p {
     font-family: "Overpass", sans-serif;
@@ -211,13 +267,24 @@
   display: inline-flex;
   justify-content: space-between;
   margin-top: 30px;
-  width: 375px;
+  //width: 375px;
   gap: 72px;
+
+  @media(max-width:790px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
 }
 
 .arrow-left {
   position: absolute;
   right: 64px;
+
+  @media(max-width:1180px) {
+    display: none;
+  }
 }
 
 button {
@@ -238,5 +305,57 @@ button {
 
   &:hover {
     width: 250px;
+  }
+
+  @media(max-width: 1350px) {
+    width: 150px;
+
+    &hover {
+      width: 200px;
+    }
+  }
+}
+
+@media(max-width: 1350px) {
+  .image-container.picture-left:hover::before,
+  .image-container.picture-right:hover::before, 
+  .picture-left:hover + .description-left,
+  .description-left:hover,
+  .picture-right:hover + .description-right,
+  .description-right:hover {
+      border-color: transparent;
+      transform: none;
+      animation: none;
+  }
+
+  .image-container.picture-left:hover .rotate-arrow,
+  .image-container.picture-right:hover .rotate-arrow {
+      opacity: 0;
+      transform: rotate(0deg);
+  }
+}
+
+@media(max-width: 790px) {
+  h2 {
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  h3 {
+    display: none;
+  }
+
+  .description-left , .description-right {
+    width: calc(100% - 64px);
+    padding: 0 !important;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
+@media(max-width: 550px) {
+  h2 {
+    white-space: normal;
   }
 }

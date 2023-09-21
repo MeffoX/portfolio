@@ -15,21 +15,21 @@ footer {
       display: flex;
       justify-content: space-between;
       flex-direction: column;
-      width: calc(100vw - 128px); /* Set the width for footer-container-top */
-      padding: 0 64px; /* Add some padding to separate content from the edges */
+      width: calc(100vw - 128px);
+      padding: 0 64px;
   
       .footer-container-top {
         display: flex;
         justify-content: space-between;
         gap: 40px;
-        align-items: center; /* Vertically center the items */
-        flex: 1; /* Allow footer-container-top to grow and fill available space */
+        align-items: center;
+        flex: 1;
   
         .icon-container {
           display: flex;
           gap: 40px;
   
-          /* Add some gap between the icon images */
+
           img {
             width: 40px;
             cursor: pointer;
@@ -77,6 +77,7 @@ footer {
   
       .footer-container-top {
         justify-content: center !important;
+        align-items: flex-end !important;
   
         img {
           &:hover {

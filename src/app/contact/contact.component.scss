@@ -93,7 +93,7 @@
       input {
         color: #fffcf3;
         font-family: "Overpass", sans-serif;
-        width: 567px;
+        width: calc(100vw - 128px);
         height: 20px;
         background-color: black;
         border: none;
@@ -145,7 +145,7 @@
     }
   
     textarea {
-      width: 567px;
+      width: calc(100vw - 128px);
       height: 172px;
       padding-top: 15px;
       padding-left: 20px;

@@ -7,7 +7,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 0px;
     background: transparent;
     z-index: 1;
  }
@@ -19,6 +19,14 @@ html{
 h2 {
     font-family: 'Syne', sans-serif;
 }
+
+@media(max-width:1180px) {
+    ::-webkit-scrollbar-thumb {
+      background: #00BC8F;
+      border-radius: 50px ;
+      z-index: 1;
+    }
+ }
   
 
 /*
