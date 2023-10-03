@@ -11,7 +11,6 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormsModule } from '@angular/forms';
-import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
 
 @NgModule({
   declarations: [
@@ -22,8 +21,7 @@ import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
     SkillsComponent,
     PortfolioComponent,
     FooterComponent,
-    ContactComponent,
-    LegalNoticeComponent
+    ContactComponent
   ],
   imports: [
     BrowserModule,
