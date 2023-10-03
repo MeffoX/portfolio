@@ -1,19 +1,8 @@
-<app-navbar></app-navbar>
-<app-startscreen id="startscreenSection" *ngIf="!isMenuOpen"></app-startscreen>
-<app-about-me id="aboutMeSection" *ngIf="!isMenuOpen"></app-about-me>
-<app-skills id="mySkillsSection" *ngIf="!isMenuOpen"></app-skills>
-<app-portfolio id="portfolioSection" *ngIf="!isMenuOpen"></app-portfolio>
-<app-contact id="contactSection" *ngIf="!isMenuOpen"></app-contact>
-<app-footer id="footerSection" *ngIf="!isMenuOpen"></app-footer>
-
-
-
-<!--
-    <app-navbar></app-navbar>
-<app-startscreen id="startscreenSection" *ngIf="!isMenuOpen"></app-startscreen>
-<app-about-me id="aboutMeSection" *ngIf="!isMenuOpen"></app-about-me>
-<app-skills id="mySkillsSection" *ngIf="!isMenuOpen"></app-skills>
-<app-portfolio id="portfolioSection" *ngIf="!isMenuOpen"></app-portfolio>
-<app-contact id="contactSection" *ngIf="!isMenuOpen"></app-contact>
-<app-footer id="footerSection" *ngIf="!isMenuOpen"></app-footer>
--->
+<app-navbar *ngIf="!isLegalNoticeOpen"></app-navbar>
+<app-startscreen id="startscreenSection" *ngIf="!isMenuOpen && !isLegalNoticeOpen"></app-startscreen>
+<app-about-me id="aboutMeSection" *ngIf="!isMenuOpen && !isLegalNoticeOpen"></app-about-me>
+<app-skills id="mySkillsSection" *ngIf="!isMenuOpen && !isLegalNoticeOpen"></app-skills>
+<app-portfolio id="portfolioSection" *ngIf="!isMenuOpen && !isLegalNoticeOpen"></app-portfolio>
+<app-contact id="contactSection" *ngIf="!isMenuOpen && !isLegalNoticeOpen"></app-contact>
+<app-footer id="footerSection" *ngIf="!isMenuOpen && !isLegalNoticeOpen"></app-footer>
+<app-legal-notice id="legalNoticeSection" *ngIf="isLegalNoticeOpen"></app-legal-notice>

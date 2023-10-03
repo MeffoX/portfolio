@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ScrollService } from '../scroll.service';
+import { MenuStateService } from '../menu-state.service';
 
 @Component({
   selector: 'app-footer',
@@ -8,11 +9,16 @@ import { ScrollService } from '../scroll.service';
 })
 export class FooterComponent {
 
-  constructor(private scrollService:ScrollService){}
-
+  constructor(
+    private scrollService: ScrollService,
+    private menuStateService: MenuStateService
+  ){}
 
   scrollTo(section:string) {
     this.scrollService.scrollToElement(section);
-}
+  }
 
+  onLegalNoticeClick(): void {
+    this.menuStateService.openLegalNotice();
+  }
 }

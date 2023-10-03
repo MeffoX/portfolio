@@ -30,8 +30,7 @@ export class NavbarComponent {
     this.isMenuOpen = !this.isMenuOpen;
     document.body.style.overflow = this.isMenuOpen ? 'hidden' : 'auto';
     this.menuStateService.toggleMenu();
-    document.body.style.overflow = this.menuStateService.menuState.value ? 'hidden' : 'auto';
-  }
+    document.body.style.overflow = this.menuStateService.isMenuOpen$.value ? 'hidden' : 'auto';  }
 
 
   copyToClipboard(element: HTMLParagraphElement) {
