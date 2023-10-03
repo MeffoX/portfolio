@@ -27,7 +27,7 @@ export class PortfolioComponent {
       livetest: 'https://el-pollo-loco.stefanroth.dev/index.html'
     },
     {
-      picture: 'assets/img/projects/pokedex.png',
+      picture: 'assets/img/projects/ringoffire.png',
       number: '03/04,',
       headline: 'Ring of Fire',
       technologies: 'Angular | Firebase | Material Design',

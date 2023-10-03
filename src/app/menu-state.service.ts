@@ -5,13 +5,27 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class MenuStateService {
+  menuState: any;
+  public isLegalNoticeOpen$ = new BehaviorSubject<boolean>(false);
+  public isMenuOpen$ = new BehaviorSubject<boolean>(false)
 
-  public menuState = new BehaviorSubject<boolean>(false);
-  menuState$ = this.menuState.asObservable();
 
-  toggleMenu() {
-    this.menuState.next(!this.menuState.value);
+  get legalNoticeOpen() {
+    return this.isLegalNoticeOpen$.asObservable();
   }
 
-  constructor() { }
+
+  toggleMenu(): void {
+    this.isMenuOpen$.next(!this.isMenuOpen$.value);
+  }
+
+
+  openLegalNotice(): void {
+    this.isLegalNoticeOpen$.next(true);
+  }
+
+
+  closeLegalNotice(): void {
+    this.isLegalNoticeOpen$.next(false);
+  }
 }
