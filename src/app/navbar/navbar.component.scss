@@ -22,11 +22,24 @@ nav {
     }
 }
 
+.content-container-nav {
+  max-width: 1920px;
+  display: flex;
+  justify-content: center;
+}
+
 .open-menu {
-    position: fixed;
+    position: relative;
     height: calc(100vh - 92px);
     width: 100vw;
     top: 92px;
+    max-width: 1920px;
+
+    @media(min-width: 1920px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 }
 
 .ul-container {

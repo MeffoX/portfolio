@@ -14,11 +14,27 @@ body {
 
 html{
     scroll-behavior: smooth;
+    display: flex;
+    justify-content: center;
 }
 
 h2 {
     font-family: 'Syne', sans-serif;
 }
+
+.content-container {
+    max-width: 1920px;
+    //width: 100%;
+  }
+
+  
+  .full-height-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
 
 @media(max-width:1180px) {
     ::-webkit-scrollbar-thumb {

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollService } from '../scroll.service';
 
 @Component({
   selector: 'app-skills',
@@ -6,6 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent {
+
+  
+  constructor(private scrollService:ScrollService){}
+
+
+  scrollTo(section:string) {
+    this.scrollService.scrollToElement(section);
+}
 
   skills: {imageUrl: string; description:string} [] = [
     {imageUrl: 'assets/img/skills/angular.png', description: 'Angular'},

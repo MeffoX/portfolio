@@ -1,4 +1,4 @@
-<div class="bottom-section">
+<div class="bottom-section content-container">
     <h2>Say Hi!</h2>
     <form (submit)="sendMail()" class="contact-section" ngNativeValidate #myForm>
         <div class="writing">
@@ -21,7 +21,7 @@
             </div>
 
             <div class="input-field">
-                <input type="email" id="email" required name="mail" #emailField autocomplete="email"/>
+                <input type="email" id="email" #emailField required name="mail" autocomplete="email"/>
                 <label for="email"><span class="label-style">Your email</span></label>
                 <div class="icon-container">
                     <i [class.loader]="isActive" class="loader"></i>
@@ -38,8 +38,12 @@
         </div>
 
         <div class="contact-btn">
-            <button type="submit" #sendButton>Send message</button>
-        </div>
+            <button type="submit" #sendButton [ngClass]="{'active': isActive}">
+              <span>{{ buttonText }}</span>
+            </button>
+          </div>
+              
+        
 
         <div class="message-box" *ngIf="messageSent">
             <p>{{messageSent}}</p>

@@ -3,7 +3,7 @@
     <span>This page is a sample of my work &shy;- please feel free to try them out</span>
 </div>
 
-<div class="projects" *ngFor="let item of projects; let i = index" [ngClass]="{'flex-reverse': i%2 != 0}">
+<div class="projects content-container" *ngFor="let item of projects; let i = index" [ngClass]="{'flex-reverse': i%2 != 0}">
     <div class="image-container" [ngClass]="{'picture-left': i%2 == 0, 'picture-right': i%2 != 0}">
         <img src="{{item.picture}}">
         <img class="rotate-arrow" src="assets/img/portfolio-arrow.svg">

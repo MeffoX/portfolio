@@ -71,6 +71,7 @@
   .arrow-right {
     position: relative;
     left: 64px;
+    max-height: 250px;
 
     @media(max-width:1180px) {
       display: none;
