@@ -261,6 +261,10 @@
     font-size: 23px;
     line-height: 120%;
     color: #00bc8f;
+
+    @media(max-width: 450px) {
+      line-height: 150%;
+    }
   }
 }
 
@@ -354,5 +358,7 @@ button {
 @media(max-width: 550px) {
   h2 {
     white-space: normal;
+    display: flex;
+    justify-content: center;
   }
 }

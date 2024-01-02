@@ -28,8 +28,18 @@
         cursor: default;
         color: #00BC8F;
       }
-    }
+
+      @media(max-width:730px) {
+        white-space: nowrap;
+      }
+
+      @media(max-width:480px) {
+      font-size: 30px;
+      top: -20px;
+      }
+}
   }
+  
   
   .icon-container {
     display: flex;
@@ -38,7 +48,11 @@
     flex-wrap: wrap;
     gap: 125px;
     padding: 64px;
+
+    @media(max-width:820px) {
+      gap: 80px;
   }
+}
   
   .skill-container {
     display: flex;
@@ -59,7 +73,16 @@
       opacity: 0.4;
       transform: translateY(-20px);
     }
+
+    @media(max-width:730px) {
+      width: 50px;
+      height: 60px;
   }
+
+  @media(max-width:450px) {
+    width: 30px;
+}
+}
 
   
   .icon-container p {

@@ -9,7 +9,7 @@ export class PortfolioComponent {
 
   projects = [
     {
-      picture: 'assets/img/projects/join.png',
+      picture: 'assets/img/projects/join_board.png',
       number: '01/04,',
       headline: 'Join',
       technologies: 'JavaScript | HTML | CSS',
@@ -36,13 +36,13 @@ export class PortfolioComponent {
       livetest: 'https://ring-of-fire-c9dda.web.app/'
     },
     {
-      picture: 'assets/img/projects/portfolio.png',
+      picture: 'assets/img/projects/dabubble.png',
       number: '04/04,',
-      headline: 'My Portfolio',
-      technologies: 'Angular | HTML | SCSS',
-      description: 'My personal Website created with Angular and SCSS.',
+      headline: 'DA-Bubble',
+      technologies: 'Angular | Typescript | Firebase | SCSS',
+      description: 'Chat application inspired by Slack. Register, write messages or add new channels in the workspace',
       github: 'https://github.com/MeffoX/portfolio',
-      livetest: '#'
+      livetest: 'https://dabubble.stefanroth.dev/'
     }
   ]
 
